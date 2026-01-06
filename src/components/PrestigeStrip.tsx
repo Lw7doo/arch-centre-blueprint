@@ -1,3 +1,4 @@
+import patternBg from "@/assets/pattern-bg.jpg";
 import { useEffect, useState } from "react";
 
 const stats = [
@@ -40,18 +41,36 @@ const Counter = ({ end, suffix }: { end: number; suffix: string }) => {
 
 const PrestigeStrip = () => {
   return (
-    <section className="prestige-strip py-16 border-y border-border">
-      <div className="container mx-auto px-6">
+    <section className="relative py-20 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0">
+        <img
+          src={patternBg}
+          alt=""
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-charcoal-900/90" />
+      </div>
+
+      {/* Decorative Lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`text-center animate-fade-up delay-${(index + 1) * 100}`}
+              className="text-center animate-fade-up group"
+              style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
-              <div className="text-4xl md:text-5xl font-bold text-gradient-bronze mb-2">
-                <Counter end={stat.value} suffix={stat.suffix} />
+              {/* Icon Circle */}
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-primary/30 flex items-center justify-center group-hover:border-primary/60 transition-colors">
+                <div className="text-3xl md:text-4xl font-bold text-gradient-bronze">
+                  <Counter end={stat.value} suffix={stat.suffix} />
+                </div>
               </div>
-              <p className="text-muted-foreground font-medium">{stat.label}</p>
+              <p className="text-foreground font-medium text-lg">{stat.label}</p>
             </div>
           ))}
         </div>

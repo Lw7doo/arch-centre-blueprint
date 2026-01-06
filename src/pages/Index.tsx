@@ -1,10 +1,13 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Vision from "@/components/Vision";
+import AboutSection from "@/components/AboutSection";
 import CoreCapabilities from "@/components/CoreCapabilities";
 import TwoPillars from "@/components/TwoPillars";
 import PrestigeStrip from "@/components/PrestigeStrip";
+import ParallaxDivider from "@/components/ParallaxDivider";
 import ProjectShowcase from "@/components/ProjectShowcase";
+import ServicesOverview from "@/components/ServicesOverview";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -14,10 +17,13 @@ const Index = () => {
       <Header />
       <Hero />
       <Vision />
+      <AboutSection />
       <CoreCapabilities />
       <TwoPillars />
       <PrestigeStrip />
+      <ParallaxDivider />
       <ProjectShowcase />
+      <ServicesOverview />
       <ContactSection />
       <Footer />
     </div>

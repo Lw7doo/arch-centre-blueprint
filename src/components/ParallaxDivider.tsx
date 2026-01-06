@@ -25,7 +25,7 @@ const ParallaxDivider = () => {
             href="#contact"
             className="inline-flex bronze-gradient bronze-gradient-hover px-8 py-4 rounded-lg font-bold text-primary-foreground transition-all duration-300 hover:shadow-xl hover:shadow-bronze-500/30"
           >
-            ابدأ مشروعك الآن
+            اطلب استشارة
           </a>
         </div>
       </div>

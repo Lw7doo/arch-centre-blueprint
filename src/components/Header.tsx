@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState<"ar" | "en">("ar");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,11 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleLanguage = () => {
+    setLanguage(language === "ar" ? "en" : "ar");
+    // In a full implementation, this would trigger i18n context change
+  };
 
   const navItems = [
     { label: "الرئيسية", href: "#home" },
@@ -51,14 +57,15 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* CTA Button - Left Side */}
+        {/* Language Toggle - Left Side */}
         <div className="hidden lg:block">
-          <a
-            href="#contact"
-            className="bronze-gradient bronze-gradient-hover px-6 py-3 rounded-lg font-bold text-sm text-primary-foreground transition-all duration-300 hover:shadow-lg hover:shadow-bronze-500/20"
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 bg-primary/10 hover:bg-primary/20 text-primary font-medium text-sm transition-all duration-300"
           >
-            اطلب استشارة
-          </a>
+            <Globe size={18} />
+            {language === "ar" ? "English" : "العربية"}
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -84,13 +91,16 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              className="bronze-gradient mt-4 px-6 py-3 rounded-lg font-bold text-center text-primary-foreground"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button
+              onClick={() => {
+                toggleLanguage();
+                setIsMobileMenuOpen(false);
+              }}
+              className="flex items-center justify-center gap-2 mt-4 px-6 py-3 rounded-lg border border-primary/30 bg-primary/10 text-primary font-medium"
             >
-              اطلب استشارة
-            </a>
+              <Globe size={18} />
+              {language === "ar" ? "English" : "العربية"}
+            </button>
           </nav>
         </div>
       )}

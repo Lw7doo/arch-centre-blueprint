@@ -50,10 +50,10 @@ const CoreCapabilities = () => {
           {capabilities.map((cap, index) => (
             <div
               key={cap.title}
-              className={`group bg-card/50 backdrop-blur p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 card-hover animate-fade-up delay-${((index % 3) + 1) * 100}`}
+              className={`group glass-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 card-hover animate-fade-up delay-${((index % 3) + 1) * 100}`}
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 backdrop-blur flex items-center justify-center group-hover:bg-primary/30 transition-colors shadow-lg shadow-primary/10">
                   <cap.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>

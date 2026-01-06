@@ -50,7 +50,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-card rounded-2xl p-8 border border-border animate-fade-up">
+          <div className="glass-card rounded-2xl p-8 border border-primary/20 animate-fade-up">
             <h3 className="text-2xl font-bold mb-6 text-foreground">أرسل استفسارك</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -61,7 +61,7 @@ const ContactSection = () => {
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-4 py-3 bg-background/50 backdrop-blur border border-primary/20 rounded-lg text-foreground focus:outline-none focus:border-primary focus:bg-background/70 transition-all"
                   placeholder="أدخل اسمك"
                   required
                 />
@@ -74,7 +74,7 @@ const ContactSection = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-4 py-3 bg-background/50 backdrop-blur border border-primary/20 rounded-lg text-foreground focus:outline-none focus:border-primary focus:bg-background/70 transition-all"
                   placeholder="05XXXXXXXX"
                   required
                 />
@@ -86,7 +86,7 @@ const ContactSection = () => {
                 <select
                   value={formData.inquiryType}
                   onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-4 py-3 bg-background/50 backdrop-blur border border-primary/20 rounded-lg text-foreground focus:outline-none focus:border-primary focus:bg-background/70 transition-all"
                   required
                 >
                   <option value="">اختر نوع الاستفسار</option>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                 <textarea
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors min-h-[120px] resize-none"
+                  className="w-full px-4 py-3 bg-background/50 backdrop-blur border border-primary/20 rounded-lg text-foreground focus:outline-none focus:border-primary focus:bg-background/70 transition-all min-h-[120px] resize-none"
                   placeholder="اكتب رسالتك هنا..."
                 />
               </div>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                 {branches.map((branch) => (
                   <div
                     key={branch.city}
-                    className="bg-card/50 backdrop-blur p-6 rounded-xl border border-border"
+                    className="glass-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-all"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-lg bronze-gradient flex items-center justify-center flex-shrink-0">
@@ -145,7 +145,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-card/50 backdrop-blur p-6 rounded-xl border border-border">
+            <div className="glass-card p-6 rounded-xl border border-primary/20 hover:border-primary/40 transition-all">
               <h4 className="text-lg font-bold text-foreground mb-4">تواصل مباشر</h4>
               <div className="space-y-4">
                 <a
@@ -163,11 +163,6 @@ const ContactSection = () => {
                   <span>info@abaad.sa</span>
                 </a>
               </div>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="bg-card/50 backdrop-blur rounded-xl border border-border overflow-hidden h-[200px] flex items-center justify-center">
-              <p className="text-muted-foreground">خريطة الموقع</p>
             </div>
           </div>
         </div>

@@ -62,7 +62,7 @@ const TwoPillars = () => {
                   {pillar.features.map((feature) => (
                     <span
                       key={feature}
-                      className="px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium border border-primary/30"
+                      className="px-4 py-2 rounded-full bg-background/30 backdrop-blur-md text-primary text-sm font-medium border border-primary/30 shadow-lg"
                     >
                       {feature}
                     </span>

@@ -64,8 +64,8 @@ const PrestigeStrip = () => {
               className="text-center animate-fade-up group"
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
-              {/* Icon Circle */}
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-primary/30 flex items-center justify-center group-hover:border-primary/60 transition-colors">
+              {/* Glass Circle */}
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full glass-card border border-primary/30 flex items-center justify-center group-hover:border-primary/60 transition-all group-hover:shadow-lg group-hover:shadow-primary/20">
                 <div className="text-3xl md:text-4xl font-bold text-gradient-bronze">
                   <Counter end={stat.value} suffix={stat.suffix} />
                 </div>

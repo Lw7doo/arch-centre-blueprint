@@ -45,14 +45,14 @@ const Vision = () => {
           {items.map((item, index) => (
             <div
               key={item.title}
-              className="group relative bg-card p-8 rounded-2xl border border-border card-hover animate-fade-up overflow-hidden"
+              className="group relative glass-card p-8 rounded-2xl border border-primary/20 hover:border-primary/40 card-hover animate-fade-up overflow-hidden"
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
               {/* Gradient Overlay on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <div className="w-16 h-16 bronze-gradient rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bronze-gradient rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
                   <item.icon className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">{item.title}</h3>
@@ -60,7 +60,8 @@ const Vision = () => {
               </div>
 
               {/* Decorative Corner */}
-              <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/20 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-primary/30 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-primary/30 rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           ))}
         </div>

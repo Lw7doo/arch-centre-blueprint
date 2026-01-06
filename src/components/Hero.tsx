@@ -50,21 +50,25 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative h-screen overflow-hidden">
-      {/* Background Images */}
+      {/* Background Images with Ken Burns Effect */}
       {heroSlides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-all duration-1000 ease-out ${
-            index === currentSlide
-              ? "opacity-100 scale-100"
-              : "opacity-0 scale-110"
+          className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${
+            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          <img
-            src={slide.image}
-            alt={slide.title}
-            className="w-full h-full object-cover"
-          />
+          <div
+            className={`w-full h-full ${
+              index === currentSlide ? "animate-ken-burns" : ""
+            }`}
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       ))}
 
@@ -92,7 +96,7 @@ const Hero = () => {
                 href="#contact"
                 className="bronze-gradient bronze-gradient-hover px-8 py-4 rounded-lg font-bold text-lg text-primary-foreground transition-all duration-300 hover:shadow-xl hover:shadow-bronze-500/30"
               >
-                اطلب استشارة مجانية
+                اطلب استشارة
               </a>
               <a
                 href="#services"

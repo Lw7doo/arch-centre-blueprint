@@ -50,12 +50,7 @@ const AboutSection = () => {
             </div>
             <div className="absolute -top-4 -right-4 w-24 h-24 border-4 border-primary/30 rounded-2xl -z-10" />
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bronze-gradient rounded-2xl opacity-20 -z-10" />
-            <div className="absolute -top-6 left-8 bg-card border border-border rounded-xl px-4 py-3 shadow-xl animate-fade-in">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-sm font-medium text-foreground">نعمل على مشاريع جديدة</span>
-              </div>
-            </div>
+            
           </div>
           <div className="animate-slide-left">
             <span className="text-primary font-medium mb-4 block">لماذا نحن</span>

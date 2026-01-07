@@ -94,13 +94,29 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="inline-flex bronze-gradient bronze-gradient-hover px-8 py-4 rounded-lg font-bold text-primary-foreground transition-all duration-300 hover:shadow-lg hover:shadow-bronze-500/20"
+                className="px-8 py-4 rounded-lg font-bold text-lg
+    text-white
+    bg-[rgba(139,69,19,0.4)] /* semi-transparent brown */
+    backdrop-blur-md
+    border border-[rgba(139,69,19,0.5)]
+    shadow-lg shadow-[rgba(139,69,19,0.2)]
+    transition-all duration-300
+    hover:bg-[rgba(139,69,19,0.6)]
+    hover:shadow-xl hover:shadow-[rgba(139,69,19,0.3)]"
               >
                 اطلب استشارة
               </a>
               <a
                 href="#services"
-                className="inline-flex bronze-gradient bronze-gradient-hover px-8 py-4 rounded-lg font-bold text-primary-foreground transition-all duration-300 hover:shadow-lg hover:shadow-bronze-500/20"
+                className="px-8 py-4 rounded-lg font-bold text-lg
+    text-white
+    bg-[rgba(139,69,19,0.4)] /* semi-transparent brown */
+    backdrop-blur-md
+    border border-[rgba(139,69,19,0.5)]
+    shadow-lg shadow-[rgba(139,69,19,0.2)]
+    transition-all duration-300
+    hover:bg-[rgba(139,69,19,0.6)]
+    hover:shadow-xl hover:shadow-[rgba(139,69,19,0.3)]"
               >
                 استكشف خدماتنا
               </a>

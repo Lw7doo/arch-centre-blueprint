@@ -108,7 +108,15 @@ const Hero = () => {
               </a>
               <a
                 href="#services"
-                className="border-2 border-primary/50 hover:border-primary px-8 py-4 rounded-lg font-bold text-lg text-foreground transition-all duration-300 hover:bg-primary/10"
+                className="px-8 py-4 rounded-lg font-bold text-lg
+    text-white
+    bg-[rgba(139,69,19,0.4)] /* semi-transparent brown */
+    backdrop-blur-md
+    border border-[rgba(139,69,19,0.5)]
+    shadow-lg shadow-[rgba(139,69,19,0.2)]
+    transition-all duration-300
+    hover:bg-[rgba(139,69,19,0.6)]
+    hover:shadow-xl hover:shadow-[rgba(139,69,19,0.3)]"
               >
                 استكشف خدماتنا
               </a>

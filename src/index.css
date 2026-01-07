@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    /* Luxurious Brown/Bronze/Black Color Palette */
-    --background: 30 10% 6%;
-    --foreground: 40 20% 95%;
+    /* Lighter Brown/Bronze Color Palette */
+    --background: 30 12% 14%;
+    --foreground: 40 25% 95%;
 
-    --card: 30 8% 10%;
-    --card-foreground: 40 20% 95%;
+    --card: 30 10% 18%;
+    --card-foreground: 40 25% 95%;
 
-    --popover: 30 8% 10%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 30 10% 18%;
+    --popover-foreground: 40 25% 95%;
 
     /* Bronze/Gold Primary */
-    --primary: 40 60% 40%;
-    --primary-foreground: 30 10% 6%;
+    --primary: 40 65% 45%;
+    --primary-foreground: 30 15% 10%;
 
     /* Warm Brown Secondary */
-    --secondary: 30 20% 15%;
-    --secondary-foreground: 40 20% 90%;
+    --secondary: 30 18% 25%;
+    --secondary-foreground: 40 25% 92%;
 
-    --muted: 30 10% 18%;
-    --muted-foreground: 40 10% 60%;
+    --muted: 30 12% 28%;
+    --muted-foreground: 40 15% 70%;
 
     /* Bronze Accent */
-    --accent: 35 70% 45%;
-    --accent-foreground: 30 10% 6%;
+    --accent: 38 70% 50%;
+    --accent-foreground: 30 15% 10%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 20% 95%;
+    --destructive-foreground: 40 25% 95%;
 
-    --border: 30 15% 20%;
-    --input: 30 15% 20%;
-    --ring: 40 60% 40%;
+    --border: 30 18% 30%;
+    --input: 30 18% 30%;
+    --ring: 40 65% 45%;
 
     --radius: 0.5rem;
 
     /* Custom Bronze Gradient */
-    --bronze-gradient: linear-gradient(135deg, hsl(40 60% 40%), hsl(35 50% 30%));
-    --bronze-gradient-hover: linear-gradient(135deg, hsl(40 65% 45%), hsl(35 55% 35%));
+    --bronze-gradient: linear-gradient(135deg, hsl(40 65% 45%), hsl(35 55% 35%));
+    --bronze-gradient-hover: linear-gradient(135deg, hsl(40 70% 50%), hsl(35 60% 40%));
     
-    /* Glassmorphism */
-    --glass-bg: hsla(30, 10%, 8%, 0.7);
-    --glass-border: hsla(40, 20%, 30%, 0.3);
+    /* Glassmorphism - Lighter */
+    --glass-bg: hsla(30, 12%, 18%, 0.75);
+    --glass-border: hsla(40, 25%, 40%, 0.35);
     
-    /* Hero Overlay */
-    --hero-overlay: linear-gradient(to bottom, hsla(30, 10%, 6%, 0.3), hsla(30, 10%, 6%, 0.8));
+    /* Hero Overlay - Lighter */
+    --hero-overlay: linear-gradient(to bottom, hsla(30, 12%, 14%, 0.25), hsla(30, 12%, 14%, 0.7));
   }
 }
 
@@ -78,8 +78,8 @@
   .glass-card {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: hsla(30, 10%, 10%, 0.6);
-    box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.3), inset 0 1px 0 hsla(40, 60%, 50%, 0.1);
+    background: hsla(30, 12%, 22%, 0.65);
+    box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.2), inset 0 1px 0 hsla(40, 65%, 55%, 0.15);
   }
 
   .hero-overlay {
@@ -111,7 +111,7 @@
   }
 
   .prestige-strip {
-    background: linear-gradient(90deg, hsl(30 10% 8%), hsl(30 12% 12%), hsl(30 10% 8%));
+    background: linear-gradient(90deg, hsl(30 12% 16%), hsl(30 14% 20%), hsl(30 12% 16%));
   }
 
   .section-divider {
@@ -234,7 +234,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(30 10% 8%);
+  background: hsl(30 12% 16%);
 }
 
 ::-webkit-scrollbar-thumb {
